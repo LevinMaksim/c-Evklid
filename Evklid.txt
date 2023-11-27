@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int sumDigits(int a, int b)
+{
+	int ost;
+	while (b != 0)
+	{
+
+		ost = b;
+		b = a % b;
+		a = ost;
+	}
+	return a;
+}
+
+
+int main()
+{
+	int sum = sumDigits(7006652, 112307574);
+	cout << sum;
